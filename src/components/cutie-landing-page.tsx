@@ -25,7 +25,7 @@ import {
     SelectValue
 } from '@/registry/new-york-v4/ui/select';
 
-type Locale = 'en' | 'th';
+type Locale = 'en' | 'th' | 'zh' | 'ko' | 'ja';
 type ServiceCategory = 'nails' | 'foot-spa' | 'hair';
 
 const translations = {
@@ -33,7 +33,7 @@ const translations = {
         services: 'Services',
         booking: 'Booking',
         contact: 'Contact',
-        bookNow: 'Book Now',
+        bookNow: 'Call Us',
         promotion: 'Special Offer: 20% off all nail services this month. Book now and save.',
         heroEyebrow: 'Chiang Mai beauty studio',
         heroTagline: 'Nails, lashes, foot spa, and hair in one soft, polished space.',
@@ -72,7 +72,7 @@ const translations = {
         services: 'บริการ',
         booking: 'จองคิว',
         contact: 'ติดต่อ',
-        bookNow: 'จองเลย',
+        bookNow: 'โทรหาเรา',
         promotion: 'โปรโมชั่นพิเศษ: ลด 20% สำหรับบริการเล็บทุกรายการในเดือนนี้ จองเลยและประหยัด',
         heroEyebrow: 'บิวตี้สตูดิโอในเชียงใหม่',
         heroTagline: 'เล็บ ขนตา สปาเท้า และผม ในบรรยากาศอบอุ่นและเรียบร้อย',
@@ -106,6 +106,123 @@ const translations = {
         allRightsReserved: 'สงวนลิขสิทธิ์ทั้งหมด',
         language: 'ภาษา',
         photoStripLabel: 'หมวดที่เลือก'
+    },
+    zh: {
+        services: '服务',
+        booking: '预订',
+        contact: '联系',
+        bookNow: '立即致电',
+        promotion: '本月所有美甲服务特别优惠 20%，立即预约更划算',
+        heroEyebrow: '清迈美甲美容工作室',
+        heroTagline: '在一个柔和精致的空间里，享受美甲、足部护理和美发服务。',
+        heroCta: '立即预约',
+        ourServices: '我们的服务',
+        nails: '美甲',
+        footSpa: '足部护理',
+        hair: '美发',
+        gelHand: '手部凝胶',
+        gelFoot: '足部凝胶',
+        pastelColors: '粉彩 / 欧泊 / 玻璃色',
+        addOns: '附加项目',
+        addOnsDesc: '亮片、钻饰、PVC、彩绘',
+        footSpaService: '足部护理',
+        footSpaDesc: '泡脚、修整、去角质和足部按摩',
+        washBlowDry: '洗发和吹干',
+        straightening: '拉直',
+        curling: '卷发',
+        startingFrom: '起价',
+        bookAppointment: '立即联系我们',
+        bookingLead: '如需预约或快速咨询，请直接通过 LINE 或 Facebook 联系店铺。',
+        bookingLineCta: '通过 LINE 联系',
+        bookingFacebookCta: '通过 Facebook 联系',
+        contactUs: '联系我们',
+        phoneLabel: '电话',
+        address: '地址',
+        addressText: '清迈 Wing 41 Pimanthip 高尔夫球场',
+        openingHours: '营业时间',
+        openingHoursText: '每日 10:00 - 20:00',
+        socialMedia: '社交媒体',
+        allRightsReserved: '版权所有。',
+        language: '语言',
+        photoStripLabel: '当前分类'
+    },
+    ko: {
+        services: '서비스',
+        booking: '예약',
+        contact: '문의',
+        bookNow: '전화하기',
+        promotion: '이번 달 모든 네일 서비스 20% 특별 할인, 지금 예약하세요',
+        heroEyebrow: '치앙마이 뷰티 스튜디오',
+        heroTagline: '부드럽고 세련된 공간에서 네일, 풋 스파, 헤어 서비스를 만나보세요.',
+        heroCta: '지금 예약하기',
+        ourServices: '서비스',
+        nails: '네일',
+        footSpa: '풋 스파',
+        hair: '헤어',
+        gelHand: '핸드 젤',
+        gelFoot: '풋 젤',
+        pastelColors: '파스텔 / 오팔 / 글라스 컬러',
+        addOns: '추가 옵션',
+        addOnsDesc: '글리터, 스톤, PVC, 네일 아트',
+        footSpaService: '풋 스파',
+        footSpaDesc: '족욕, 정리, 스크럽, 발 마사지',
+        washBlowDry: '샴푸 및 블로우 드라이',
+        straightening: '스트레이트',
+        curling: '컬링',
+        startingFrom: '시작가',
+        bookAppointment: '지금 메시지 보내기',
+        bookingLead: '예약이나 빠른 문의는 LINE 또는 Facebook으로 직접 연락해 주세요.',
+        bookingLineCta: 'LINE으로 문의',
+        bookingFacebookCta: 'Facebook으로 문의',
+        contactUs: '문의하기',
+        phoneLabel: '전화',
+        address: '주소',
+        addressText: '치앙마이 Wing 41 Pimanthip 골프 코스',
+        openingHours: '영업시간',
+        openingHoursText: '매일 10:00 - 20:00',
+        socialMedia: '소셜 미디어',
+        allRightsReserved: '모든 권리 보유.',
+        language: '언어',
+        photoStripLabel: '선택된 카테고리'
+    },
+    ja: {
+        services: 'サービス',
+        booking: '予約',
+        contact: 'お問い合わせ',
+        bookNow: '今すぐ電話',
+        promotion: '今月はすべてのネイルサービスが20%オフ。今すぐご予約ください',
+        heroEyebrow: 'チェンマイのビューティースタジオ',
+        heroTagline: 'やわらかく洗練された空間で、ネイル、フットスパ、ヘアサービスをご提供します。',
+        heroCta: '今すぐ予約',
+        ourServices: 'サービス一覧',
+        nails: 'ネイル',
+        footSpa: 'フットスパ',
+        hair: 'ヘア',
+        gelHand: 'ハンドジェル',
+        gelFoot: 'フットジェル',
+        pastelColors: 'パステル / オパール / ガラスカラー',
+        addOns: '追加メニュー',
+        addOnsDesc: 'グリッター、ストーン、PVC、ネイルアート',
+        footSpaService: 'フットスパ',
+        footSpaDesc: '足浴、ケア、スクラブ、フットマッサージ',
+        washBlowDry: 'シャンプー＆ブロー',
+        straightening: 'ストレート',
+        curling: 'カール',
+        startingFrom: '料金は',
+        bookAppointment: '今すぐメッセージ',
+        bookingLead: 'ご予約やお問い合わせは、LINE または Facebook から直接ご連絡ください。',
+        bookingLineCta: 'LINEで連絡',
+        bookingFacebookCta: 'Facebookで連絡',
+        contactUs: 'お問い合わせ',
+        phoneLabel: '電話',
+        address: '住所',
+        addressText: 'チェンマイ Wing 41 Pimanthip ゴルフコース',
+        openingHours: '営業時間',
+        openingHoursText: '毎日 10:00 - 20:00',
+        socialMedia: 'SNS',
+        allRightsReserved: '無断転載禁止。',
+        language: '言語',
+        photoStripLabel: '選択中のカテゴリー'
     }
 } as const;
 
@@ -134,6 +251,18 @@ const carouselImages = [
     '/images/CutieNails6.png'
 ];
 
+const portfolioImages = [
+    '/images/Portfolio01.png',
+    '/images/Portfolio02.png',
+    '/images/Portfolio03.png',
+    '/images/Portfolio04.png',
+    '/images/Portfolio05.png',
+    '/images/Portfolio06.png',
+    '/images/Portfolio07.png',
+    '/images/Portfolio08.png',
+    '/images/Portfolio09.png'
+];
+
 const categoryImages: Record<ServiceCategory, string> = {
     nails: '/images/nails.png',
     'foot-spa': '/images/footspa.png',
@@ -142,7 +271,10 @@ const categoryImages: Record<ServiceCategory, string> = {
 
 const localeFlags: Record<Locale, string> = {
     en: '🇬🇧',
-    th: '🇹🇭'
+    th: '🇹🇭',
+    zh: '🇨🇳',
+    ko: '🇰🇷',
+    ja: '🇯🇵'
 };
 
 export function CutieLandingPage() {
@@ -204,6 +336,24 @@ export function CutieLandingPage() {
                                         <span>ไทย</span>
                                     </span>
                                 </SelectItem>
+                                <SelectItem value='zh'>
+                                    <span className='flex items-center gap-2'>
+                                        <span>{localeFlags.zh}</span>
+                                        <span>中文</span>
+                                    </span>
+                                </SelectItem>
+                                <SelectItem value='ko'>
+                                    <span className='flex items-center gap-2'>
+                                        <span>{localeFlags.ko}</span>
+                                        <span>한국어</span>
+                                    </span>
+                                </SelectItem>
+                                <SelectItem value='ja'>
+                                    <span className='flex items-center gap-2'>
+                                        <span>{localeFlags.ja}</span>
+                                        <span>日本語</span>
+                                    </span>
+                                </SelectItem>
                             </SelectContent>
                         </Select>
                     </div>
@@ -245,13 +395,31 @@ export function CutieLandingPage() {
                                         <span>ไทย</span>
                                     </span>
                                 </SelectItem>
+                                <SelectItem value='zh'>
+                                    <span className='flex items-center gap-2'>
+                                        <span>{localeFlags.zh}</span>
+                                        <span>中文</span>
+                                    </span>
+                                </SelectItem>
+                                <SelectItem value='ko'>
+                                    <span className='flex items-center gap-2'>
+                                        <span>{localeFlags.ko}</span>
+                                        <span>한국어</span>
+                                    </span>
+                                </SelectItem>
+                                <SelectItem value='ja'>
+                                    <span className='flex items-center gap-2'>
+                                        <span>{localeFlags.ja}</span>
+                                        <span>日本語</span>
+                                    </span>
+                                </SelectItem>
                             </SelectContent>
                         </Select>
 
                         <Button
                             asChild
                             className='rounded-lg bg-[#f17492] px-5 text-white shadow-none hover:bg-[#df6383]'>
-                            <a href='#booking'>{t.bookNow}</a>
+                            <a href='tel:0951483227'>{t.bookNow}</a>
                         </Button>
                     </div>
 
@@ -259,7 +427,7 @@ export function CutieLandingPage() {
                         <Button
                             asChild
                             className='rounded-lg bg-[#f17492] px-4 text-white shadow-none hover:bg-[#df6383] sm:px-5'>
-                            <a href='#booking'>{t.bookNow}</a>
+                            <a href='tel:0951483227'>{t.bookNow}</a>
                         </Button>
                     </div>
                 </div>
@@ -373,9 +541,23 @@ export function CutieLandingPage() {
                 </div>
             </section>
 
+            <section className='overflow-hidden bg-white'>
+                <div className='cutie-marquee flex gap-0' style={{ animationDuration: '57s' }}>
+                    {[...portfolioImages, ...portfolioImages].map((image, index) => (
+                        <div key={`${image}-${index}`} className='flex-none'>
+                            <img
+                                src={image}
+                                alt={`Cutie Nails portfolio ${index + 1}`}
+                                className='block h-[280px] w-auto max-w-none md:h-[245px]'
+                            />
+                        </div>
+                    ))}
+                </div>
+            </section>
+
             <section id='booking' className='bg-white'>
-                <div className='grid min-h-[720px] lg:grid-cols-2'>
-                    <div className='relative min-h-[360px] lg:min-h-full'>
+                <div className='grid min-h-[720px] lg:min-h-[460px] lg:grid-cols-2'>
+                    <div className='relative order-2 min-h-[360px] lg:order-1 lg:min-h-[460px]'>
                         <img
                             src='/images/booking nails.png'
                             alt='Booking preview'
@@ -384,23 +566,23 @@ export function CutieLandingPage() {
                         <div className='absolute inset-0 bg-[linear-gradient(180deg,rgba(53,32,36,0.1),rgba(53,32,36,0.46))]' />
                     </div>
 
-                    <div className='bg-[#f17492] px-6 py-16 sm:px-10 lg:px-14'>
+                    <div className='order-1 bg-[#f17492] px-6 py-16 sm:px-10 lg:order-2 lg:px-12 lg:py-8'>
                         <div className='mx-auto max-w-xl'>
                             <p className='text-xs tracking-[0.34em] text-white/75 uppercase'>{t.booking}</p>
-                            <h2 className='mt-4 text-4xl font-semibold text-white sm:text-5xl'>{t.bookAppointment}</h2>
-                            <p className='mt-4 max-w-lg text-base leading-7 text-white/85'>{t.bookingLead}</p>
-                            <div className='mt-10 grid gap-5'>
+                            <h2 className='mt-3 text-4xl font-semibold text-white sm:text-5xl lg:text-4xl'>{t.bookAppointment}</h2>
+                            <p className='mt-3 max-w-lg text-base leading-7 text-white/85 lg:text-sm lg:leading-6'>{t.bookingLead}</p>
+                            <div className='mt-8 grid gap-4'>
                                 <a
                                     href='https://lin.ee/J8t7egb'
                                     target='_blank'
                                     rel='noreferrer'
-                                    className='group rounded-[2rem] bg-white px-6 py-6 text-[#5d4a43] transition-transform hover:-translate-y-1'>
+                                    className='group rounded-[1.75rem] bg-white px-6 py-5 text-[#5d4a43] transition-transform hover:-translate-y-1'>
                                     <div className='flex items-center justify-between gap-4'>
                                         <div>
                                             <p className='text-xs tracking-[0.28em] text-[#f17492] uppercase'>LINE</p>
-                                            <p className='mt-2 text-2xl font-semibold'>{t.bookingLineCta}</p>
+                                            <p className='mt-2 text-2xl font-semibold lg:text-xl'>{t.bookingLineCta}</p>
                                         </div>
-                                        <div className='rounded-full bg-[#f17492] p-4 text-white'>
+                                        <div className='rounded-full bg-[#f17492] p-3 text-white'>
                                             <MessageCircle className='size-6' />
                                         </div>
                                     </div>
@@ -410,24 +592,17 @@ export function CutieLandingPage() {
                                     href='https://www.facebook.com/profile.php?id=100092538978586'
                                     target='_blank'
                                     rel='noreferrer'
-                                    className='group rounded-[2rem] bg-white/92 px-6 py-6 text-[#5d4a43] transition-transform hover:-translate-y-1'>
+                                    className='group rounded-[1.75rem] bg-white/92 px-6 py-5 text-[#5d4a43] transition-transform hover:-translate-y-1'>
                                     <div className='flex items-center justify-between gap-4'>
                                         <div>
                                             <p className='text-xs tracking-[0.28em] text-[#f17492] uppercase'>Facebook</p>
-                                            <p className='mt-2 text-2xl font-semibold'>{t.bookingFacebookCta}</p>
+                                            <p className='mt-2 text-2xl font-semibold lg:text-xl'>{t.bookingFacebookCta}</p>
                                         </div>
-                                        <div className='rounded-full bg-[#f17492] p-4 text-white'>
+                                        <div className='rounded-full bg-[#f17492] p-3 text-white'>
                                             <Facebook className='size-6' />
                                         </div>
                                     </div>
                                 </a>
-
-                                <div className='rounded-[2rem] border border-white/30 bg-white/10 px-6 py-5 text-white/88'>
-                                    <div className='flex items-center gap-3'>
-                                        <Clock className='size-5' />
-                                        <p>{t.openingHoursText}</p>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -450,7 +625,9 @@ export function CutieLandingPage() {
                                     </div>
                                     <div>
                                         <h3 className='text-lg font-medium text-[#58413b]'>{t.phoneLabel}</h3>
-                                        <p className='mt-2 text-[#7a635a]'>095-148-3227</p>
+                                        <a href='tel:0951483227' className='mt-2 inline-block text-[#7a635a] hover:text-[#f17492]'>
+                                            095-148-3227
+                                        </a>
                                     </div>
                                 </div>
 
