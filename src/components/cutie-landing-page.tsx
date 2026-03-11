@@ -39,6 +39,7 @@ const translations = {
         heroTagline: 'Nails, lashes, foot spa, and hair in one soft, polished space.',
         heroCta: 'Reserve your appointment',
         ourServices: 'Our Services',
+        servicesLead: 'Choose your treatment and explore the menu before messaging the salon.',
         nails: 'Nails',
         footSpa: 'Foot Spa',
         hair: 'Hair',
@@ -78,6 +79,7 @@ const translations = {
         heroTagline: 'เล็บ ขนตา สปาเท้า และผม ในบรรยากาศอบอุ่นและเรียบร้อย',
         heroCta: 'จองเวลานัดหมาย',
         ourServices: 'บริการของเรา',
+        servicesLead: 'เลือกบริการที่ต้องการและดูเมนูก่อนทักหาร้านได้เลย',
         nails: 'เล็บ',
         footSpa: 'สปาเท้า',
         hair: 'ผม',
@@ -117,6 +119,7 @@ const translations = {
         heroTagline: '在一个柔和精致的空间里，享受美甲、足部护理和美发服务。',
         heroCta: '立即预约',
         ourServices: '我们的服务',
+        servicesLead: '先浏览服务项目，再直接联系店铺预约。',
         nails: '美甲',
         footSpa: '足部护理',
         hair: '美发',
@@ -156,6 +159,7 @@ const translations = {
         heroTagline: '부드럽고 세련된 공간에서 네일, 풋 스파, 헤어 서비스를 만나보세요.',
         heroCta: '지금 예약하기',
         ourServices: '서비스',
+        servicesLead: '원하는 서비스를 먼저 둘러본 뒤 매장에 바로 문의해 주세요.',
         nails: '네일',
         footSpa: '풋 스파',
         hair: '헤어',
@@ -195,6 +199,7 @@ const translations = {
         heroTagline: 'やわらかく洗練された空間で、ネイル、フットスパ、ヘアサービスをご提供します。',
         heroCta: '今すぐ予約',
         ourServices: 'サービス一覧',
+        servicesLead: 'サービス内容を確認してから、そのままお店へご連絡いただけます。',
         nails: 'ネイル',
         footSpa: 'フットスパ',
         hair: 'ヘア',
@@ -219,7 +224,7 @@ const translations = {
         addressText: 'チェンマイ Wing 41 Pimanthip ゴルフコース',
         openingHours: '営業時間',
         openingHoursText: '毎日 10:00 - 20:00',
-        socialMedia: 'SNS',
+        socialMedia: 'ソーシャルメディア',
         allRightsReserved: '無断転載禁止。',
         language: '言語',
         photoStripLabel: '選択中のカテゴリー'
@@ -277,6 +282,8 @@ const localeFlags: Record<Locale, string> = {
     ja: '🇯🇵'
 };
 
+const servicesPanelHeight = 560;
+
 export function CutieLandingPage() {
     const [selectedFilter, setSelectedFilter] = useState<ServiceCategory>('nails');
     const [language, setLanguage] = useState<Locale>('en');
@@ -311,14 +318,15 @@ export function CutieLandingPage() {
     );
 
     const filteredServices = services.filter((service) => service.category === selectedFilter);
+    const shouldMatchImageHeight = filteredServices.length >= 4;
 
     return (
         <main className='bg-[linear-gradient(180deg,#fff7f3_0%,#ffe9ee_45%,#fffdf9_100%)] text-[#4a3a33]'>
-            <header className='sticky top-0 z-50 border-b border-white/40 bg-[#d9bea8]/90 backdrop-blur'>
+            <header className='sticky top-0 z-50 border-b border-white/40 bg-[#fee8eb]/90 backdrop-blur'>
                 <div className='mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-3 px-4 py-4 sm:px-6 md:grid-cols-[1fr_auto_1fr] lg:px-8'>
                     <div className='flex items-center justify-start md:hidden'>
                         <Select value={language} onValueChange={(value) => setLanguage(value as Locale)}>
-                            <SelectTrigger className='h-10 w-[60px] rounded-lg border-white/30 bg-transparent text-white shadow-none'>
+                            <SelectTrigger className='h-10 w-[60px] rounded-lg border-[#f17492]/30 bg-transparent text-[#f17492] shadow-none'>
                                 <div className='flex items-center gap-2'>
                                     <span className='text-base leading-none'>{localeFlags[language]}</span>
                                 </div>
@@ -362,21 +370,21 @@ export function CutieLandingPage() {
                         <img src='/images/cutielogotopnav.png' alt='Cutie Nails & Spa' className='h-9 w-auto sm:h-10' />
                     </a>
 
-                    <nav className='hidden items-center justify-center gap-10 text-base font-medium text-white md:flex'>
-                        <a href='#services' className='transition-colors hover:text-[#f17492]'>
+                    <nav className='hidden items-center justify-center gap-10 text-base font-medium text-[#f17492] md:flex'>
+                        <a href='#services' className='transition-colors hover:text-[#df6383]'>
                             {t.services}
                         </a>
-                        <a href='#booking' className='transition-colors hover:text-[#f17492]'>
+                        <a href='#booking' className='transition-colors hover:text-[#df6383]'>
                             {t.booking}
                         </a>
-                        <a href='#contact' className='transition-colors hover:text-[#f17492]'>
+                        <a href='#contact' className='transition-colors hover:text-[#df6383]'>
                             {t.contact}
                         </a>
                     </nav>
 
                     <div className='hidden items-center justify-end gap-3 md:flex'>
                         <Select value={language} onValueChange={(value) => setLanguage(value as Locale)}>
-                            <SelectTrigger className='h-10 w-[76px] rounded-lg border-white/30 bg-transparent text-white shadow-none'>
+                            <SelectTrigger className='h-10 w-[76px] rounded-lg border-[#f17492]/30 bg-transparent text-[#f17492] shadow-none'>
                                 <div className='flex items-center gap-2'>
                                     <Globe className='size-4' />
                                     <span className='text-base leading-none'>{localeFlags[language]}</span>
@@ -472,9 +480,10 @@ export function CutieLandingPage() {
                     <div className='mx-auto mb-12 max-w-2xl text-center'>
                         <p className='text-xs tracking-[0.36em] text-[#c4607b] uppercase'>{t.services}</p>
                         <h2 className='mt-4 text-4xl font-semibold text-[#f17492] sm:text-5xl'>{t.ourServices}</h2>
+                        <p className='mt-4 text-base leading-7 text-[#8a6f74]'>{t.servicesLead}</p>
                     </div>
 
-                    <div className='mb-10 flex flex-wrap justify-center gap-3'>
+                    <div className='mb-12 flex flex-wrap justify-center gap-3'>
                         {filters.map((filter) => {
                             const IconComponent = filter.icon;
 
@@ -485,8 +494,8 @@ export function CutieLandingPage() {
                                     onClick={() => setSelectedFilter(filter.id)}
                                     className={
                                         selectedFilter === filter.id
-                                            ? 'rounded-full bg-[#f17492] px-6 text-white hover:bg-[#df6383]'
-                                            : 'rounded-full border-[#f17492]/40 bg-white text-[#f17492] hover:bg-[#fff0f4]'
+                                            ? 'rounded-full bg-[#f17492] px-6 text-white shadow-[0_14px_30px_rgba(241,116,146,0.24)] hover:bg-[#df6383]'
+                                            : 'rounded-full border-[#f17492]/30 bg-white/90 text-[#f17492] shadow-[0_10px_24px_rgba(241,116,146,0.08)] hover:bg-[#fff0f4]'
                                     }>
                                     <IconComponent className='size-4' />
                                     {filter.name}
@@ -495,39 +504,63 @@ export function CutieLandingPage() {
                         })}
                     </div>
 
-                    <div className='grid gap-8 lg:grid-cols-[1.05fr_0.95fr]'>
-                        <div className='grid gap-4'>
-                            {filteredServices.map((service) => (
+                    <div className='grid items-start gap-8 lg:grid-cols-[1.05fr_0.95fr]'>
+                        <div
+                            className={shouldMatchImageHeight ? 'grid gap-4' : 'grid gap-4'}
+                            style={
+                                shouldMatchImageHeight
+                                    ? {
+                                          height: `${servicesPanelHeight}px`,
+                                          gridTemplateRows: `repeat(${filteredServices.length}, minmax(0, 1fr))`
+                                      }
+                                    : undefined
+                            }>
+                            {filteredServices.map((service, index) => (
                                 <Card
                                     key={`${service.category}-${service.name}`}
-                                    className='border-[#f5d7dc] bg-white/90 py-0 shadow-[0_18px_45px_rgba(241,116,146,0.08)]'>
+                                    className={`${shouldMatchImageHeight ? 'h-full' : ''} overflow-hidden border-[#f5d7dc] bg-white/92 py-0 shadow-[0_18px_45px_rgba(241,116,146,0.08)]`}>
                                     <CardContent className='p-6'>
-                                        <div className='flex items-start justify-between gap-4'>
-                                            <div>
-                                                <h3 className='text-lg font-medium text-[#58413b]'>{service.name}</h3>
+                                        <div className='flex items-start gap-4'>
+                                            <div className='flex h-11 w-11 flex-none items-center justify-center rounded-2xl bg-[#fff1f5] text-sm font-semibold text-[#f17492]'>
+                                                {String(index + 1).padStart(2, '0')}
+                                            </div>
+                                            <div className='flex min-w-0 flex-1 items-start justify-between gap-4 border-l border-[#f7d7dd] pl-4'>
+                                                <div>
+                                                    <h3 className='text-lg font-medium text-[#58413b]'>{service.name}</h3>
+                                                    <p className='mt-1 text-xs tracking-[0.26em] text-[#d08a99] uppercase'>
+                                                        {filters.find((filter) => filter.id === service.category)?.name}
+                                                    </p>
+                                                    {service.description ? (
+                                                        <p className='mt-3 text-sm leading-6 text-[#856b62]'>{service.description}</p>
+                                                    ) : null}
+                                                </div>
                                                 {service.description ? (
-                                                    <p className='mt-2 text-sm leading-6 text-[#856b62]'>{service.description}</p>
+                                                    <div className='hidden h-full w-px bg-[#f7d7dd] lg:block' />
+                                                ) : null}
+                                                {service.price ? (
+                                                    <span className='rounded-full bg-[#fff1f5] px-4 py-2 text-sm font-medium text-[#f17492]'>
+                                                        {service.price}
+                                                    </span>
                                                 ) : null}
                                             </div>
-                                            {service.price ? (
-                                                <span className='rounded-full bg-[#fff1f5] px-4 py-2 text-sm font-medium text-[#f17492]'>
-                                                    {service.price}
-                                                </span>
-                                            ) : null}
                                         </div>
                                     </CardContent>
                                 </Card>
                             ))}
                         </div>
 
-                        <Card className='overflow-hidden border-[#edcfbf] bg-[#fff8f4] py-0 shadow-[0_24px_64px_rgba(149,101,83,0.14)]'>
+                        <Card className='self-start overflow-hidden border-[#edcfbf] bg-[#fff8f4] py-0 shadow-[0_24px_64px_rgba(149,101,83,0.14)]'>
                             <CardContent className='p-0'>
                                 <div className='relative'>
                                     <img
                                         src={categoryImages[selectedFilter]}
                                         alt={`${selectedFilter} service`}
-                                        className='h-[460px] w-full object-cover'
+                                        className='w-full object-cover'
+                                        style={{ height: `${servicesPanelHeight}px` }}
                                     />
+                                    <div className='absolute top-5 left-5 rounded-full bg-white/88 px-4 py-2 text-xs font-semibold tracking-[0.24em] text-[#f17492] uppercase backdrop-blur-sm'>
+                                        {t.ourServices}
+                                    </div>
                                     <div className='absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,transparent,rgba(57,31,37,0.74))] p-6 text-white'>
                                         <p className='text-xs tracking-[0.32em] uppercase'>{t.photoStripLabel}</p>
                                         <p className='mt-2 text-2xl font-medium'>
